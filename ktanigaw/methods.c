@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 void	test(int a[4][4][5])
 {
@@ -166,5 +167,43 @@ int	main(int argc, char *argv[])
 		i++;
 		printf("\n");
 	}
-}
 //now_printf-end--------------------------------------------------------------------------------
+//final_printfout-start--------------------------------------------------------------------------------
+	printf("final_printout format ------------start--------------\n\n\n");
+	i = 0;
+	j = 0;
+	k = 1;
+	char final[3];
+
+	final[1] = ' ' ;
+	final[2] = '\n';
+	while (i < size_i)
+	{
+		while (j < size_j)
+		{
+			while (k < size_k)
+			{
+				if(a[i][j][k] == 1)
+				{
+
+					final[0] = '0' + k;
+					write(1,&final[0],1);
+					break;
+				}
+				k++;
+			}
+			//write(1,& ,1);
+			k = 1;
+			j++;
+			write(1,&final[1],1);
+		}
+		write(1,&final[2],1);
+		//write(1,\n,1);
+		j = 0;
+		i++;
+	}
+
+	printf("final_printout format-------------end-------------");
+//final_printfout-end--------------------------------------------------------------------------------
+
+}
