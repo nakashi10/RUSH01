@@ -17,3 +17,4 @@ void	first_input(int a[4][4][5])
 			a[i][j][k] = 1;
 		}
 	}
+}
