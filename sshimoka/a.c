@@ -1,7 +1,7 @@
 void	first_input(int a[4][4][5])
 {
 	int	i;
-	int	j:
+	int	j;
 	int	k;
 
 	i=-1;
@@ -12,9 +12,14 @@ void	first_input(int a[4][4][5])
 		{
 			k = -1;
 			while (++k < 5)
+			{
 				if (k == 0)
-				a[i][j][k] = 0;
-			a[i][j][k] = 1;
+				{
+					a[i][j][k] = 0;
+				}
+				else
+					a[i][j][k] = 1;
+			}
 		}
 	}
 }
