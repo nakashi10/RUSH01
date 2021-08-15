@@ -1,38 +1,36 @@
 #include <stdio.h>
 
+int	g_k = 0;
+int	g_count = 0;
+
 void	map_update(int map[4][4][5], int size_i, int size_j, int size_k);
 
 void	scroll_k(int map[4][4][5], int size_k, int i, int j)
 {
-	int	k;
-	int	count;
-
-	k = 1;
-	while (k < size_k)
+	g_k = 0;
+	while (g_k++ < size_k)
 	{
 		if (map[i][j][0] == 1)
 			return ;
-		if (map[i][j][k] == 1)
+		if (map[i][j][g_k] == 1)
 		{
-			if (k == size_k - 1)
+			if (g_k == size_k - 1)
 			{
 				map[i][j][0] = 1;
 				break ;
 			}
-			count = k + 1;
-			while (count < size_k)
+			g_count = g_k;
+			while (g_count++ < size_k)
 			{
-				if (map[i][j][count] == 1)
+				if (map[i][j][g_count] == 1)
 					return ;
 				if (map[i][j][size_k - 1] == 0)
 				{
 					map[i][j][0] = 1;
 					return ;
 				}
-				count++;
 			}
 		}
-		k++;
 	}
 }
 
@@ -54,7 +52,5 @@ void	map_scroll(int map[4][4][5], int size_i, int size_j, int size_k)
 		}
 		j = 0;
 		i++;
-		printf("\n");
 	}
-	printf("method end");
 }
