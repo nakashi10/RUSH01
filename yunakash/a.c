@@ -46,7 +46,7 @@ int main()
 		for (int k = 0; k < n; k++)
 		{
 			for (int l = 0; l < n + 1; l++)
-				printf("flag[%d][%d][%d]=%d\n", j, k, l, a[j][k][l]);
+				printf("a[%d][%d][%d]=%d\n", j, k, l, a[j][k][l]);
 			printf("\n");
 		}
 		printf("\n");

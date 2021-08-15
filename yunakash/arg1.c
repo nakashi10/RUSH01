@@ -1,4 +1,7 @@
-void	set_flag(int n, int a[4][4][5]);
+void	set_flag4(int n, int a[4][4][5]);
+void	set_flag8(int n, int a[4][4][5]);
+void	set_flag12(int n, int a[4][4][5]);
+void	set_flag16(int n, int a[4][4][5]);
 void	ft_arg1(int n, int a[4][4][5])
 {
 	if (n < 4)
@@ -7,15 +10,15 @@ void	ft_arg1(int n, int a[4][4][5])
 	}
 	else if (n < 8)
 	{
-		set_flag(n, a);
+		set_flag8(n, a);
 	}
 	else if (n < 12)
 	{
-		set_flag(n, a);
+		set_flag12(n, a);
 	}
 	else
 	{
-		set_flag(n, a);
+		set_flag16(n, a);
 	}
 }
 
