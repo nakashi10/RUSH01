@@ -1,10 +1,9 @@
 #include <unistd.h>
-#include <stdio.h>
 
-void halfchar(char c[32])
+void	halfchar(char c[32])
 {
-	int i;
-	int counter;
+	int	i;
+	int	counter;
 
 	i = 0;
 	counter = -1;
@@ -19,19 +18,19 @@ void halfchar(char c[32])
 	}
 }
 
-void counter_char(int counter)
+void	counter_check(int counter)
 {
 	if (counter != 16)
 	{
 		write(1, "Error", 5);
-		return;
+		return ;
 	}
 }
 
 void	error_check(char argv[32])
 {
-	int i;
-	int counter;
+	int	i;
+	int	counter;
 
 	i = -1;
 	counter = 0;
@@ -52,12 +51,5 @@ void	error_check(char argv[32])
 			}
 		}
 	}
-	counter_char(counter);
-}
-
-int main(int argc, char *argv[])
-{
-	error_check(argv[1]);
-	halfchar(argv[1]);
-	return 0;
+	counter_check(counter);
 }

@@ -1,3 +1,5 @@
+#include <unistd.h>
+
 void	halfchar(char c[32])
 {
 	int	i;
@@ -25,7 +27,7 @@ void	counter_char(int counter)
 	}
 }
 
-void	fr_error(char *argv[])
+void	fr_error(char argv[32])
 {
 	int	i;
 	int	counter;
@@ -50,5 +52,10 @@ void	fr_error(char *argv[])
 		}
 	}
 	counter_char(counter);
+	halfchar(argv[1]);
+}
+
+int	main(int argc, char *argv[])
+{
 	halfchar(argv[1]);
 }
