@@ -1,5 +1,6 @@
 #include <stdio.h>
 void ft_arg1(int n, int a[4][4][5]);
+void ft_arg4(int n, int a[4][4][5]);
 
 int main()
 {
@@ -26,25 +27,28 @@ int main()
 			}
 		}
 	}
-
-	char arg = '1';
-	i = 0;
-	while (++i <= 16)
+ 
+	char arg[16] = {'4','3','2','1','1','2','2','2','4','3','2','1','1','2','2','2'};
+	i = -1;
+	while (i++ < 15)
 	{
-		if (arg == '1')
-		{
+		if (arg[i] == '1')
 			ft_arg1(i, a);
-		}
-
-		//引数からa[h][i]を計算する
-		int n1;
-		int n2;
-		n1 = (i - 1) / 4;
-		n2 = (i - 1) % 4;
-		int k = -1;
-		while (++k < 5)
+		if (arg[i] == '4')
 		{
-			printf("after a[%d][%d][%d] = %d\n", n1, n2, k, a[n1][n2][k]);
+			ft_arg4(i, a);
 		}
+	}
+
+	int n = 4;
+	for (int j = 0; j < n; j++)
+	{
+		for (int k = 0; k < n; k++)
+		{
+			for (int l = 0; l < n + 1; l++)
+				printf("a[%d][%d][%d]=%d\n", j, k, l, a[j][k][l]);
+			printf("\n");
+		}
+		printf("\n");
 	}
 }
