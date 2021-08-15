@@ -53,7 +53,7 @@ int map[4][4][5];
 	map[0][1][4] = 1;
 	map_print(map, size_i, size_j, size_k);
 	map_scroll(map, size_i, size_j, size_k);
-	// map_update(map, size_i, size_j, size_k);
+	map_update(map, size_i, size_j, size_k);
 	// map[0][1][0] = 0;
 	// map[0][1][1] = 0;
 	// map[0][1][2] = 0;
@@ -62,3 +62,4 @@ int map[4][4][5];
 
 	map_print(map, size_i, size_j, size_k);
 }
+
