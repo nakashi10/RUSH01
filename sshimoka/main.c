@@ -34,6 +34,6 @@ int main(int argc, char *argv[])
 			printf("flag[%d][%d][%d]=%d\n", j, k, l, flag[j][k][l]);
 		}
 	}
-	ft_putchar(n, flag);
+	// ft_putchar(n, flag);
         return (0);
 }
