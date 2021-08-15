@@ -2,9 +2,9 @@
 
 	void	map_print(int map[4][4][5], int size_i, int size_j, int size_k)
 	{
-	int i;
-	int j;
-	int k;
+	int	i;
+	int	j;
+	int	k;
 
 	i = 0;
 	j = 0;
