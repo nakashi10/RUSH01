@@ -26,8 +26,8 @@ void	ft_arg4(int n, int a[4][4][5])
 
 void	change_line4(int n, int a[4][4][5])
 {
-	int n1;
-	int n2;
+	int	n1;
+	int	n2;
 	int	h;
 	int	i;
 
@@ -49,8 +49,8 @@ void	change_line4(int n, int a[4][4][5])
 
 void	change_line8(int n, int a[4][4][5])
 {
-	int n1;
-	int n2;
+	int	n1;
+	int	n2;
 	int	h;
 	int	i;
 
@@ -72,8 +72,8 @@ void	change_line8(int n, int a[4][4][5])
 
 void	change_line12(int n, int a[4][4][5])
 {
-	int n1;
-	int n2;
+	int	n1;
+	int	n2;
 	int	h;
 	int	i;
 
@@ -95,8 +95,8 @@ void	change_line12(int n, int a[4][4][5])
 
 void	change_line16(int n, int a[4][4][5])
 {
-	int n1;
-	int n2;
+	int	n1;
+	int	n2;
 	int	h;
 	int	i;
 
