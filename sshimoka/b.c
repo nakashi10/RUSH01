@@ -1,33 +1,53 @@
 #include <unistd.h>
 
-void	ft_putchar(int a[4][4])
+void	ft_putchar(int n, int flag[n][n][n + 1])
 {
 	int	i;
 	int	j;
-	char	c;
+	int	k;
 
-	i = 0;
-	while (i++ < 4)
+	i = -1;
+	while (++i < n)
 	{
-		while (j++ < 4)
+		j = -1;
+		while (++j < n)
 		{
-			c[i][j] = a[i][j] + '0';
-			if (j != 0)
-				write(1, " ", 1);
-			write(1, c[i][j], 1);
+			k = 0;
+			while (++k < n + 1)
+			{
+				if (j != 0)
+					write(1, " ", 1);
+				if (flag[i][j][k] == 1)
+					write(1, &k, 1);
+			}
+			write(1, "\n", 1);
 		}
-		write(1, "\n", 1);
 	}
 }
 
 int	main(void)
 {
-	int	a[4][4];
+	int	n = 4;
+	int	flag[n][n][n + 1];
+	int	i;
+	int	j;
+	int	k;
 
-	for (int i=0; i<4; i++){
-		for (int j=0; j=4; j++){
-			a[4][4] = 1;
+	i = -1;
+	while (++i < n)
+	{
+		j = -1;
+		while (++j < n)
+		{
+			k = -1;
+			while (k++ < n)
+			{
+				flag[i][j][k] = k;
+			}
 		}
 	}
-	ft_putchar(a);
+
+ft_putchar(n, flag);
+
+
 }
