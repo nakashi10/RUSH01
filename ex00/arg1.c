@@ -2,6 +2,7 @@ void	set_flag4(int n, int a[4][4][5]);
 void	set_flag8(int n, int a[4][4][5]);
 void	set_flag12(int n, int a[4][4][5]);
 void	set_flag16(int n, int a[4][4][5]);
+
 void	ft_arg1(int n, int a[4][4][5])
 {
 	if (n < 4)
