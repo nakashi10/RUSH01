@@ -5,6 +5,8 @@ void	first_input(int nn, int a[n][n][n + 1]);
 
 void	taimenn_12(int nn, char c[n * 4], int flag[n][n][n + 1]);
 
+void	ft_putchar(int nn, int flag[n][n][n + 1]);
+
 int main(int argc, char *argv[])
 {
 	int	flag[n][n][n + 1];
@@ -32,5 +34,6 @@ int main(int argc, char *argv[])
 			printf("flag[%d][%d][%d]=%d\n", j, k, l, flag[j][k][l]);
 		}
 	}
+	// ft_putchar(n, flag);
         return (0);
 }

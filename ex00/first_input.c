@@ -1,14 +1,14 @@
-void	first_input(int n, int a[4][4][5])
+void	first_input(int n, int a[n][n][n + 1])
 {
 	int	i;
 	int	j;
 	int	k;
 
-	i=-1;
+	i = -1;
 	while (++i < n)
 	{
-		j=-1;
-		while (++j <n)
+		j = -1;
+		while (++j < n)
 		{
 			k = -1;
 			while (++k < n + 1)
