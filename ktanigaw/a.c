@@ -61,41 +61,37 @@ int main()
 	int size_i = sizeof a / sizeof a[0];
 	int size_j = sizeof a / sizeof a[0][0] / size_i;
 	int size_k = sizeof a / sizeof a[0][0][0] / size_i / size_j;
-	//map_final_print(a, size_i, size_j, size_k);
-	map_print(a, size_i, size_j, size_k);
+
+	map_final_print(a, size_i, size_j, size_k);
+	 map_print(a, size_i, size_j, size_k);
 	taimenn_12(4, arg, a);
 	map_print(a, size_i, size_j, size_k);
 
 	map_final_print(a, size_i, size_j, size_k);
 
-	// printf("\n\n map_update start");
-	// map_update(a, size_i, size_j, size_k);
-	// printf("\n\n map_update end");
+	printf("\n\n map_update start");
+	map_update(a, size_i, size_j, size_k);
+	printf("\n\n map_update end");
 
-	// map_print(a, size_i, size_j, size_k);
+	map_print(a, size_i, size_j, size_k);
 
-	// printf("\n\n map_scroll start");
-	// map_scroll(a, size_i, size_j, size_k);
-	// printf("\n\n map_scroll end");
-	// map_print(a, size_i, size_j, size_k);
-	// map_final_print(a, size_i, size_j, size_k);
-
-
-	// printf("\n\n map_update start");
-	// map_update(a, size_i, size_j, size_k);
-	// printf("\n\n map_update end");
-
-	// map_print(a, size_i, size_j, size_k);
-
-	// printf("\n\n map_scroll start");
-	// map_scroll(a, size_i, size_j, size_k);
-	// printf("\n\n map_scroll end");
-	// map_print(a, size_i, size_j, size_k);
-	// map_final_print(a, size_i, size_j, size_k);
+	printf("\n\n map_scroll start");
+	map_scroll(a, size_i, size_j, size_k);
+	printf("\n\n map_scroll end");
+	map_print(a, size_i, size_j, size_k);
+	map_final_print(a, size_i, size_j, size_k);
 
 
+	printf("\n\n map_update start");
+	map_update(a, size_i, size_j, size_k);
+	printf("\n\n map_update end");
 
+	map_print(a, size_i, size_j, size_k);
 
-	// map_update(a, size_i, size_j, size_k);
-	// map_scroll(a, size_i, size_j, size_k);
+	printf("\n\n map_scroll start");
+	map_scroll(a, size_i, size_j, size_k);
+	printf("\n\n map_scroll end");
+	map_print(a, size_i, size_j, size_k);
+	map_final_print(a, size_i, size_j, size_k);
+
 }
