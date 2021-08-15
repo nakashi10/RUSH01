@@ -2,23 +2,23 @@
 #include <stdio.h>
 
 
-void	final_printout(int map[4][4][5]){
+void	final_printout(int map[4][4][5],int size_i,int size_j,int size_k){
 
     int i;
 	int j;
 	int k;
-	int size_i;
-	int size_j;
-	int size_k;
+	// int size_i;
+	// int size_j;
+	// int size_k;
 
 	i = 0;
 	j = 0;
 	k = 0;
-	size_i = sizeof map / sizeof map[0];
-	size_j = sizeof map / sizeof map[0][0] / size_i;
-	size_k = sizeof map / sizeof map[0][0][0] / size_i / size_j;
+	// size_i = sizeof map / sizeof map[0];
+	// size_j = sizeof map / sizeof map[0][0] / size_i;
+	// size_k = sizeof map / sizeof map[0][0][0] / size_i / size_j;
 
-	//----------------------------start---------------------------------------
+	// //----------------------------start---------------------------------------
 	i = 0;
 	j = 0;
 	k = 1;
@@ -32,7 +32,7 @@ void	final_printout(int map[4][4][5]){
 		{
 			while (k < size_k)
 			{
-				if(a[i][j][k] == 1)
+				if(map[i][j][k] == 1)
 				{
 
 					final[0] = '0' + k;
@@ -41,13 +41,11 @@ void	final_printout(int map[4][4][5]){
 				}
 				k++;
 			}
-			//write(1,& ,1);
 			k = 1;
 			j++;
 			write(1,&final[1],1);
 		}
 		write(1,&final[2],1);
-		//write(1,\n,1);
 		j = 0;
 		i++;
 	}
@@ -89,5 +87,5 @@ int	main(void)
 		j = 0;
 		i++;
 	}
-	final_printout(map);
+		final_printout(map, size_i, size_j, size_k);
 }
