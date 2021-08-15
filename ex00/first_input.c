@@ -1,4 +1,4 @@
-void	first_input(int n, int a[n][n][n + 1])
+void	first_input(int n, int a[4][4][5])
 {
 	int	i;
 	int	j;

@@ -18,16 +18,17 @@ void	halfchar(char c[32])
 	}
 }
 
-void	counter_check(int counter)
+int	counter_check(int counter)
 {
 	if (counter != 16)
 	{
-		write(1, "Error", 5);
-		return ;
+		write(1, "Error\n", 6);
+		return (0);
 	}
+	return 1;
 }
 
-void	error_check(char argv[32])
+int	error_check(char argv[32])
 {
 	int	i;
 	int	counter;
@@ -38,18 +39,19 @@ void	error_check(char argv[32])
 	{
 		if (i % 2 == 0 && argv[i] == ' ')
 		{
-			write(1, "Error", 5);
-			return ;
+			write(1, "Error\n", 6);
+			return (0);
 		}
 		if (48 <= argv[i] && argv[i] <= 57)
 		{
 			counter++;
 			if (i % 2 == 1)
 			{
-				write(1, "Error", 5);
-				return ;
+				write(1, "Error\n", 6);
+				return (0);
 			}
 		}
 	}
-	counter_check(counter);
+
+	return counter_check(counter);
 }
